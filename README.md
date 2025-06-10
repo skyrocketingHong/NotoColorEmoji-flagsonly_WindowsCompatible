@@ -1,6 +1,6 @@
-# Noto Color Emoji Flags
+# Noto Color Emoji Flags - Windows Compatible
 
-A lightweight font containing only flag emojis from Google's Noto Color Emoji font, optimized for Windows compatibility.
+A lightweight, Windows-compatible font containing only flag emojis from Google's Noto Color Emoji font, with cross-platform build tools and system integration support.
 
 ## Overview
 
@@ -132,14 +132,14 @@ def merge_flag_fonts():
     # Load fonts
     system_font = ttLib.TTFont("fonts/seguiemj_original.ttf")
     flags_font = ttLib.TTFont("fonts/NotoColorEmoji-flagsonly_WindowsCompatible.ttf")
-
+    
     # Create merger instance
     merger = Merger()
-
+    
     # Merge flag characters from Noto into Segoe UI Emoji
     # This replaces existing flag glyphs with Noto versions
     merged_font = merger.merge([system_font, flags_font])
-
+    
     # Save merged font
     merged_font.save("fonts/seguiemj_with_noto_flags.ttf")
     print("Merged font created: seguiemj_with_noto_flags.ttf")
@@ -245,7 +245,7 @@ For web applications, use CSS font-family prioritization:
 ```css
 /* Prioritize Noto flags, fallback to system emoji */
 .emoji {
-    font-family:
+    font-family: 
         "Noto Color Emoji Flags",
         "Segoe UI Emoji",
         "Apple Color Emoji",
@@ -278,7 +278,7 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-
+        
         // Set font fallback
         var fontFamily = new FontFamily("Noto Color Emoji Flags, Segoe UI Emoji");
         this.FontFamily = fontFamily;
@@ -303,9 +303,9 @@ Create a test HTML file:
 <html>
 <head>
     <style>
-        body {
-            font-family: "Noto Color Emoji Flags", "Segoe UI Emoji";
-            font-size: 24px;
+        body { 
+            font-family: "Noto Color Emoji Flags", "Segoe UI Emoji"; 
+            font-size: 24px; 
         }
     </style>
 </head>
@@ -386,9 +386,11 @@ The build scripts and tools in this repository are provided as-is for educationa
 
 ## Acknowledgments
 
-- Google Fonts team for the excellent Noto Color Emoji font
-- HarfBuzz project for the powerful font subsetting tools
-- fontTools library for font manipulation capabilities
+- [Google Fonts team](https://fonts.google.com/) for the excellent [Noto Color Emoji font](https://github.com/googlefonts/noto-emoji)
+- [HarfBuzz project](https://github.com/harfbuzz/harfbuzz) for the powerful font subsetting tools
+- [fontTools library](https://github.com/fonttools/fonttools) for font manipulation capabilities
+- [Noto Emoji project](https://github.com/googlefonts/noto-emoji) for maintaining high-quality emoji fonts
+- [Microsoft Typography team](https://docs.microsoft.com/en-us/typography/) for Windows font system documentation
 
 ---
 
