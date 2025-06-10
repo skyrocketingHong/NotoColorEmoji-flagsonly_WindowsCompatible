@@ -1,0 +1,1 @@
+# NotoColorEmoji-flagsonly_WindowsCompatible
